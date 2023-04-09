@@ -8,7 +8,7 @@ body
 {
     background-color:#cfefd0 !important;
 }
-p
+p, span
 {
     font-size:17px;
     font-family: Loto;
@@ -69,15 +69,21 @@ section
 {
     padding:60px 0;
 }
-.intro, .skills, .education, .experience, .projects, .contact, .awards
+.intro-body, .skills-body, .education-body, .experience-body, .projects-body, .contact-body, .awards-body
 {
     border-bottom: 2px dotted #609966;
 }
-.intro h1
+.skills-body h2, .education-body h2, .experience-body h2, .projects-body h2, .contact-body h2, .awards-body h2
+{
+    border-bottom: 3px solid #609966;
+    display: inline-block;
+    padding:5px 15px;
+}
+.intro-body h1
 {
     font-size:4em;
 }
-.intro h3
+.intro-body h3
 {
     font-weight: lighter;
     letter-spacing: 2px;
@@ -246,10 +252,10 @@ section
 
 .main-timeline .year {
     display: block;
-    font-size: 30px;
+    font-size: 10px;
     font-weight: 700;
     color: #232323;
-    line-height: 36px
+    line-height: 30px
 }
 
 .main-timeline .timeline-content {
@@ -335,7 +341,7 @@ section
         top: 30%
     }
     .main-timeline .year {
-        font-size: 24px
+        font-size: 9px
     }
     .main-timeline .timeline-content,
     .main-timeline .timeline:nth-child(2n) .timeline-content {
@@ -348,16 +354,16 @@ section
     }
 }
 /* Awards Section */
-.awards .card
+.awards-body .card, .projects-body .card
 {
-    width:500px !important;
+    width:500px;
     background-color: #fff;
     padding:10px;
     border-radius: 5px;
     box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
 }
 /* Contact Section */
-.contact span
+.contact-body span
 {
     background-color: #198754;
     color:#fff;
@@ -365,11 +371,29 @@ section
     font-size:25px;
     border-radius: 5px;
 }
-.contact span:hover
+.contact-body span:hover
 {
     background-color: #157347;
     color:#fff;
     padding:10px;
     font-size:25px;
     border-radius: 5px;
+}
+@media screen and (max-width:767px) {
+    .navbar
+    {
+        border-bottom: 2px dotted #609966;
+    }
+    .offcanvas
+    {
+        background-color:#cfefd0 !important;
+    }
+    .navbar-toggler:focus
+    {
+        box-shadow: none;
+    }
+    .intro-body h1 
+    {
+        font-size: 2.5em;
+    }
 }

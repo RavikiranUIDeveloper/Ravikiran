@@ -188,9 +188,9 @@ section
     background: #198754;
     margin: auto 0;
     position: absolute;
-    top: -10px !important;
+    top: -10px;
     right: 10px;
-    bottom: 12px;
+    bottom: 12px !important;
     z-index:9;
 }
 
